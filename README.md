@@ -13,18 +13,23 @@ Periodic functions are functions that repeat. Discrete functions are functions w
 connect. An example of a discrete periodic function is the function of "Wednesdays" on a calendar.
 Wednesdays are discrete values along a timeline, and they repeat every 7 days.
 
+### What might I use this library for?
+
+Continuing the example from above, this library could be used to determine the number of Wednesdays between
+two days. You could extend this to find the number of work days or week days between two days.
+
 ### Terminology
 
 The members of a periodic function's output are the "values." A single member is a "value."
 
-The interval that the function repeats along is the "period."
+The distance that the function repeats itself along is the "period."
 
-A "point" is any value in the domain of the function.
+An interval is defined by a "start" and "end".
 
 ### API
 
 ##### `containedPeriodicValues(start, end, value, period)`
 
-Find the 
+Find the number of values contained with the "start" and "end." This method is
+inclusive, meaning that values on the endpoints are included.
 
-Find the nearest value to `point`. Supply a `value` from the codomain of the function, and its `period`.
