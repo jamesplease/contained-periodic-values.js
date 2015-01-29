@@ -34,3 +34,4 @@ Find the number of values contained with the "start" and "end." This method work
 intervals with inclusive starts and exclusive ends. In math syntax, this would be written
 as `[start, end)`.
 
+The order that you specify the start and end does not matter.
