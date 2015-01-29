@@ -50,22 +50,47 @@ describe('Contained', function() {
   });
 
   describe('When several values exist within the intervals, none of them on endpoints', function() {
-    beforeEach(function() {
-      this.contained = containedPeriodicValues(0, 10, 4, 5);
+    describe('and the interval endpoints are swapped', function() {
+      beforeEach(function() {
+        this.contained = containedPeriodicValues(10, 0, 4, 5);
+      });
+
+      it('should include them all', function() {
+        expect(this.contained).to.equal(2);
+      });
     });
 
-    it('should include them all', function() {
-      expect(this.contained).to.equal(2);
+    describe('and the intervals are in order', function() {
+      beforeEach(function() {
+        this.contained = containedPeriodicValues(0, 10, 4, 5);
+      });
+
+      it('should include them all', function() {
+        expect(this.contained).to.equal(2);
+      });
     });
+    
   });
 
   describe('When the value is behind the start', function() {
-    beforeEach(function() {
-      this.contained = containedPeriodicValues(0, 10, -1, 5);
-    });
+    describe('and the interval endpoints are swapped', function() {
+      beforeEach(function() {
+        this.contained = containedPeriodicValues(10, 0, -1, 5);
+      });
 
-    it('should still work', function() {
-      expect(this.contained).to.equal(2);
+      it('should still work', function() {
+        expect(this.contained).to.equal(2);
+      });
+    });
+    
+    describe('and the interval endpoints are in order', function() {
+      beforeEach(function() {
+        this.contained = containedPeriodicValues(0, 10, -1, 5);
+      });
+
+      it('should still work', function() {
+        expect(this.contained).to.equal(2);
+      });
     });
   });
 
