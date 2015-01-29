@@ -1,6 +1,11 @@
 import nearestPeriodicValue from 'nearest-periodic-value';
 
 function containedPeriodicValues(start, end, value, period) {
+
+  // Inclusive start; exclusive end
+  if (start === end) { return 0; }
+  end += start > end ? 1 : -1;
+  
   var nearest = nearestPeriodicValue(start, value, period);
 
   // Ensure that the nearest value is in front of the start
