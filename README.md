@@ -30,6 +30,8 @@ An interval is defined by a "start" and "end".
 
 ##### `containedPeriodicValues(start, end, value, period)`
 
-Find the number of values contained with the "start" and "end." This method is
-inclusive, meaning that values on the endpoints are included.
+Find the number of values contained with the "start" and "end." This method works with
+intervals with inclusive starts and exclusive ends. In math syntax, this would be written
+as `[start, end)`.
 
+The order that you specify the start and end does not matter.

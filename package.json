@@ -1,6 +1,6 @@
 {
   "name": "contained-periodic-values",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Find how many values of a discrete periodic function are contained in an interval.",
   "main": "dist/contained-periodic-values.js",
   "scripts": {

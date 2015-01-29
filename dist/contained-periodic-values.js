@@ -11,6 +11,21 @@
   "use strict";
 
   var containedPeriodicValues = function (start, end, value, period) {
+    // Inclusive start; exclusive end
+    if (start === end) {
+      return 0;
+    }
+
+    // Flip our interval if it isn't ordered properly
+    if (start > end) {
+      var newEnd = start;
+      start = end;
+      end = newEnd;
+    }
+
+    // Make our interval have an exclusive end
+    end--;
+
     var nearest = nearestPeriodicValue(start, value, period);
 
     // Ensure that the nearest value is in front of the start
