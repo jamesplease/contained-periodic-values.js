@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/jmeas/contained-periodic-values.js.svg)](https://david-dm.org/jmeas/contained-periodic-values.js) 
 [![devDependency Status](https://david-dm.org/jmeas/contained-periodic-values.js/dev-status.svg)](https://david-dm.org/jmeas/contained-periodic-values.js#info=devDependencies)
 
-Find the values of a discrete periodic function contained in an interval.
+Find how many values of a discrete periodic function contained in an interval.
 
 ### What are discrete periodic functions?
 
