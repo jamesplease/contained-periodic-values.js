@@ -1,16 +1,9 @@
-(function (root, factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["nearest-periodic-value"], factory);
-  } else if (typeof exports !== "undefined") {
-    var nearestPeriodicValue = require("nearest-periodic-value");
-    module.exports = factory(nearestPeriodicValue);
-  } else {
-    root.containedPeriodicValues = factory(root.nearestPeriodicValue);
-  }
+(function (global, factory) {
+  typeof exports === "object" && typeof module !== "undefined" ? module.exports = factory(require("nearest-periodic-value")) : typeof define === "function" && define.amd ? define(["nearest-periodic-value"], factory) : global.containedPeriodicValues = factory(global.nearestPeriodicValue);
 })(this, function (nearestPeriodicValue) {
   "use strict";
 
-  var containedPeriodicValues = function (start, end, value, period) {
+  function containedPeriodicValues(start, end, value, period) {
     // Inclusive start; exclusive end
     if (start === end) {
       return 0;
@@ -44,11 +37,10 @@
     else {
       return 1 + parseInt((end - nearest) / period);
     }
-  };
+  }
 
+  var contained_periodic_values = containedPeriodicValues;
 
-
-
-  return containedPeriodicValues;
+  return contained_periodic_values;
 });
-//# sourceMappingURL=contained-periodic-values.js.map
+//# sourceMappingURL=./contained-periodic-values.js.map
